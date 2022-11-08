@@ -3,10 +3,10 @@
 {% block content %}
   <div class="site-container">
     <header class="header header-lk">
-  <div class="container">
+  <div class="container"> 
     <div class="header__inner">
       <a href="lk.html" class="header__logo">
-        <img src="img/logo-small.svg" alt="">
+        <img src="{% static 'img/logo-small.svg' %}" alt="">
         <div class="header__logo-text">цвет<span>рус</span></div>
       </a>
       <nav class="nav" title="" data-menu>
@@ -647,7 +647,7 @@
         <ul class="list-reset offer-lk__list" >
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -661,7 +661,7 @@
           </li>
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -675,7 +675,7 @@
           </li>
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -689,7 +689,7 @@
           </li>
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -703,7 +703,7 @@
           </li>
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -717,7 +717,7 @@
           </li>
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -731,7 +731,7 @@
           </li>
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -745,7 +745,7 @@
           </li>
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="img/offer-1.png" alt="">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
             </div>
             <div class="offer__item-content">
               <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -764,35 +764,12 @@
   </div>
 </div>
 
-    <footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <a href="" class="footer__politics">Политика конфиденциальности</a>
-      <ul class="list-reset social__list">
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/insta-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/whatsup-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/twiter-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/tele-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/vk-icon.png);"></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
+{% include 'include/footer.html' %}
 
 <div class="graph-modal lk-modal">
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
     <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
-      <img src="img/modal-close.svg" alt="">
+      <img src="{% static 'img/modal-close.svg' %}" alt="">
     </button>
     <div class="graph-modal-content">
       <div class="lk-modal__title">Мои заказы</div>
@@ -802,14 +779,14 @@
 
       </label>
       <button class="btn-reset lk-modal__send" aria-label="Отправить сообщение">
-        <img src="img/message-send.svg" alt="">
+        <img src="{% static 'img/message-send.svg' %}" alt="">
       </button>
     </div>
   </div>
 
   <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
     <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
-      <img src="img/modal-close.svg" alt="">
+      <img src="{% static 'img/modal-close.svg' %}" alt="">
     </button>
     <div class="graph-modal-content">
       <div class="lk-modal__title">Позвонить</div>
@@ -821,10 +798,10 @@
 </div>
     <div class="ancor">
   <button class="btn btn-reset ancor__btn" data-graph-path="call">
-    <img src="img/ancor-phone.png" alt="">
+    <img src="{% static 'img/ancor-phone.png' %}" alt="">
   </button>
   <button class="btn btn-reset ancor__btn" data-graph-path="message">
-    <img src="img/ancor-message.png" alt="">
+    <img src="{% static 'img/ancor-message.png' %}" alt="">
   </button>
 </div>
   </div>

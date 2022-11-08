@@ -22,8 +22,10 @@ from apps.settings.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='mainpage'),
-    path('user/', include('apps.user.urls'))
+    path('homepage/', index, name='mainpage'),
+    path('user/', include('apps.user.urls')),
+    path('', include('apps.flower.urls')),
+
 ]
 
 

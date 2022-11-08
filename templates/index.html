@@ -49,7 +49,7 @@
                 <div class="mainscreen-offer__text">Стройте логистику сами — выберите какой склад для получения заказа вам подходит больше</div>
               </div>
             </div>
-            <div class="mainscreen-offer__col">
+            <div style='padding-right:130px;' class="mainscreen-offer__col">
               <div class="mainscreen-offer__item">
                 <div class="mainscreen-offer__title mainscreen-offer__title--proc">процесс</div>
                 <div class="mainscreen-offer__text">Прозрачный процесс ценообразования — вы увидите цену товара, доставки и цену комиссионного сбора</div>
@@ -59,7 +59,6 @@
                 <div class="mainscreen-offer__text">Наша задача — предоставить всем желающим доступ к покупке цветов напрямую от производителя </div>
               </div>
             </div>
-            <button class="btn btn-reset btn__reg">подробнее</button>
           </div>
         </div>
         <div class="mainscreen__counter">02<span>05</span></div>
@@ -106,6 +105,8 @@
               </div>
             </div>
           </div>
+          <button style='margin-top:20px;' class="btn btn-reset btn__reg">подробнее</button>
+
         </div>
         <div class="mainscreen__counter">03<span>05</span></div>
       </section>
@@ -144,7 +145,7 @@
             </div>
             <div class="mainscreen-reg__buttons">
               <a href="{% url 'B_reg' %}" class="btn btn-reset btn__mainreg">как покупатель</a>
-              <a href="saler-reg.html" class="btn btn-reset btn__mainreg">как продавец</a>
+              <a href="{% url 'S_reg' %}" class="btn btn-reset btn__mainreg">как продавец</a>
             </div>
             <ul class="list-reset social__list social__list--vertical">
               <li class="social__item">

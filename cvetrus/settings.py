@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #apps
     'apps.settings',
     'apps.user',
+    'apps.flower',
 ]
 
 MIDDLEWARE = [

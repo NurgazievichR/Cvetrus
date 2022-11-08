@@ -12,3 +12,10 @@ class User(AbstractUser):
     brief_description = models.CharField('Краткое описание', max_length=100, blank=True)
     last_activity = models.DateTimeField('Был в сети', default=timezone.now)
 
+    def __str__(self) -> str:
+        return f'{self.username}'
+
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
+        ordering = ('-id',)

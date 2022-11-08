@@ -7,7 +7,13 @@
 <div class="regform">
   <div class="container">
     <div class="regform__inner">
-      <h2 class="title regform__title">я — покупатель </h2>
+      <h2 class="title regform__title">я — 
+        {% if s_id %}
+        продавец
+        {% else %}
+        покупатель
+        {% endif %}
+       </h2>
       <form method="POST" class="form regform__form">
         {% csrf_token %}
         <div class="regform-left">
