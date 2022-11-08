@@ -1,0 +1,831 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="site-container">
+    <header class="header header-lk">
+  <div class="container">
+    <div class="header__inner">
+      <a href="lk.html" class="header__logo">
+        <img src="img/logo-small.svg" alt="">
+        <div class="header__logo-text">цвет<span>рус</span></div>
+      </a>
+      <nav class="nav" title="" data-menu>
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
+          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
+          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
+          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
+        </ul>
+      </nav>
+      <label class="form__label header-lk__search">
+        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
+      </label>
+      <a href="tel:" class="header-lk__phone"></a>
+      <a href="lk-page.html" class="btn-reset header__login"></a>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+    <div class="offer-lk">
+  <div class="container container-wide">
+    <div class="offer-lk__wrapper">
+      <div class="offer-lk__filter filter">
+        <h2 class="title offer-lk__title">Фильтры</h2>
+        <div class="tabs" data-tabs="filter-tab">
+          <ul class="list-reset tabs__nav">
+            <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">плантация</button></li>
+            <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">тип</button></li>
+            <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">сорт</button></li>
+            <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">размер</button></li>
+            <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">Цвета</button></li>
+          </ul>
+          <div class="tabs__content">
+            <div class="tabs__panel">
+              <label class="filter__search-label">
+                <input type="text" name="компания" class="filter__search-input" placeholder="">
+              </label>
+              <ul class="list-reset filter__list " data-simplebar >
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+              </ul>
+              <div class="filter__output">
+                <div class="filter__output-name">плантация</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">размер</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">тип</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">сорт</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <label class="filter__search-label">
+                <input type="text" name="компания" class="filter__search-input" placeholder="">
+              </label>
+              <ul class="list-reset filter__list" data-simplebar>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+              </ul>
+              <div class="filter__output">
+                <div class="filter__output-name">плантация</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">размер</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">тип</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">сорт</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <label class="filter__search-label">
+                <input type="text" name="компания" class="filter__search-input" placeholder="">
+              </label>
+              <ul class="list-reset filter__list" data-simplebar>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+              </ul>
+              <div class="filter__output">
+                <div class="filter__output-name">плантация</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">размер</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">тип</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">сорт</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <label class="filter__search-label">
+                <input type="text" name="компания" class="filter__search-input" placeholder="">
+              </label>
+              <ul class="list-reset filter__list" data-simplebar>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+              </ul>
+              <div class="filter__output">
+                <div class="filter__output-name">плантация</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">размер</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">тип</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">сорт</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <label class="filter__search-label">
+                <input type="text" name="компания" class="filter__search-input" placeholder="">
+              </label>
+              <ul class="list-reset filter__list" data-simplebar>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label>
+                    <input class="check-box" type="checkbox" name="" id="">
+                    <p>все</p>
+                  </label>
+                </li>
+              </ul>
+              <div class="filter__output">
+                <div class="filter__output-name">плантация</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">размер</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">тип</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+              <div class="filter__output">
+                <div class="filter__output-name">сорт</div>
+                <button class="btn-reset filter__output-btn">все</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-lk__content">
+        <h2 class="title offer-lk__title">Предложения</h2>
+        <ul class="list-reset offer-lk__list" >
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+          <li class="offer__item">
+            <div class="offer-lk__item-image">
+              <img src="img/offer-1.png" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="" class="btn btn-reset offer-lk__btn">раскрыть</a>
+  </div>
+</div>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="" class="footer__politics">Политика конфиденциальности</a>
+      <ul class="list-reset social__list">
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/insta-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/whatsup-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/twiter-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/tele-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/vk-icon.png);"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="graph-modal lk-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Мои заказы</div>
+      <div class="mymessage__cart-vol">Здравствуйте, как внести баланс на на сайт?</div>
+      <label class="form__label">
+        <textarea type="text" name="Имя" class="form__input lk-modal__textarea" placeholder="Ваше сообщение..."></textarea>
+
+      </label>
+      <button class="btn-reset lk-modal__send" aria-label="Отправить сообщение">
+        <img src="img/message-send.svg" alt="">
+      </button>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Позвонить</div>
+      <div class="call-modal__phone">+7 999 999-99-99</div>
+      <div class="call-modal__logo">ЦВЕТ<span>РУС</span></div>
+      <a href="tel:+79999999999" class="call-modal__link">позвонить</a>
+    </div>
+  </div>
+</div>
+    <div class="ancor">
+  <button class="btn btn-reset ancor__btn" data-graph-path="call">
+    <img src="img/ancor-phone.png" alt="">
+  </button>
+  <button class="btn btn-reset ancor__btn" data-graph-path="message">
+    <img src="img/ancor-message.png" alt="">
+  </button>
+</div>
+  </div>
+{% endblock %}

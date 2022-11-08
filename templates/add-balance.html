@@ -1,0 +1,118 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="site-container">
+    <header class="header header-lk">
+  <div class="container">
+    <div class="header__inner">
+      <a href="lk.html" class="header__logo">
+        <img src="img/logo-small.svg" alt="">
+        <div class="header__logo-text">цвет<span>рус</span></div>
+      </a>
+      <nav class="nav" title="" data-menu>
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
+          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
+          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
+          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
+        </ul>
+      </nav>
+      <label class="form__label header-lk__search">
+        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
+      </label>
+      <a href="tel:" class="header-lk__phone"></a>
+      <a href="lk-page.html" class="btn-reset header__login"></a>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+    <div class="regform add">
+  <div class="container">
+    <div class="regform__inner add__inner">
+      <h2 class="title add__title">Мой кошелёк</h2>
+
+        <form action="#" class="form add__form">
+          <div class="add__left">
+            <input type="hidden" name="theme" value="Обратный звонок">
+            <input type="hidden" name="admin_email[]" value="">
+            <input type="hidden" name="form_subject" value="Заявка с сайта">
+            <div class="add__form-title">Пополнение баланса</div>
+              <label class="add__form-label">
+                Введите сумму платежа
+                <input type="text" name="сумма" class="add__form-input" placeholder="1 000, 00 Р">
+              </label>
+              <div class="add__form-title">О покупателе</div>
+              <label class="add__form-label">
+                телефон
+                <input type="tel" name="телефон" class="add__form-input" placeholder="8 999 999 99 99*">
+              </label>
+              <label class="add__form-label">
+                ФИО
+                <input type="text" name="ФИО" class="add__form-input add__form-input--name" placeholder="Пупкин Александр Аркадиевич">
+              </label>
+              <label class="add__form-label">
+                город
+                <input type="text" name="Новосибирск" class="add__form-input" placeholder="Новосибирск*">
+              </label>
+          </div>
+          <div class="add__right">
+            <div class="add__right-balance">
+              <div class="add__right-title">Баланс</div>
+              <div class="add__right-vol">15 000, 00 Р</div>
+            </div>
+            <button class="btn btn-reset add__btn">пополнить</button>
+          </div>
+        </form>
+
+    </div>
+    <div class="add__btns">
+      <a href="history-bb.html" class="btn btn-reset add__button">история покупок</a>
+      <a href="history-tb.html" class="btn btn-reset add__button">история транзакций</a>
+    </div>
+  </div>
+</div>
+
+<div class="graph-modal lk-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Мои заказы</div>
+      <div class="mymessage__cart-vol">Здравствуйте, как внести баланс на на сайт?</div>
+      <label class="form__label">
+        <textarea type="text" name="Имя" class="form__input lk-modal__textarea" placeholder="Ваше сообщение..."></textarea>
+
+      </label>
+      <button class="btn-reset lk-modal__send" aria-label="Отправить сообщение">
+        <img src="{% static 'img/message-send.svg' %}" alt="">
+      </button>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Позвонить</div>
+      <div class="call-modal__phone">+7 999 999-99-99</div>
+      <div class="call-modal__logo">ЦВЕТ<span>РУС</span></div>
+      <a href="tel:+79999999999" class="call-modal__link">позвонить</a>
+    </div>
+  </div>
+</div>
+    <div class="ancor">
+  <button class="btn btn-reset ancor__btn" data-graph-path="call">
+    <img src="{% static 'img/ancor-phone.png' %}" alt="">
+  </button>
+  <button class="btn btn-reset ancor__btn" data-graph-path="message">
+    <img src="{% static 'img/ancor-message.png' %}" alt="">
+  </button>
+</div>
+  </div>
+{% endblock %}

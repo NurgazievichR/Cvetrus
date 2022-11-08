@@ -1,0 +1,201 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="site-container">
+    <header class="header header-lk">
+  <div class="container">
+    <div class="header__inner">
+      <a href="lk.html" class="header__logo">
+        <img src="img/logo-small.svg" alt="">
+        <div class="header__logo-text">цвет<span>рус</span></div>
+      </a>
+      <nav class="nav" title="" data-menu>
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
+          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
+          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
+          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
+        </ul>
+      </nav>
+      <label class="form__label header-lk__search">
+        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
+      </label>
+      <a href="tel:" class="header-lk__phone"></a>
+      <a href="lk-page.html" class="btn-reset header__login"></a>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+    <div class="offer-lk">
+  <div class="container">
+    <div class="offer-lk__wrapper">
+      <div class="offer-lk__content history__content">
+        <div class="history__top">
+          <h2 class="title history__title">Мои заказы</h2>
+          <label class="form__label header-lk__search history__search">
+            <input type="text" name="Имя" class="form__input header-lk__serch-input history__search-input" placeholder="Поиск заказов">
+          </label>
+        </div>
+        <ul class="list-reset history__list">
+          <li class="offer__item">
+            <!-- <div id="rateYo"></div>
+
+            <script>
+              $(function () {
+ 
+                $("#rateYo").rateYo({
+                  starWidth: "50px",
+                  normalFill: "#A0A0A0",
+                  ratedFill: "#02BC08",
+                  spacing   : "15px",
+                  "rating" : 3.2,
+                  "starSvg": '<svg width="44" height="42" viewBox="0 0 44 42" xmlns="http://www.w3.org/2000/svg">'+
+                              '<path d = "M21.0489 0.92705C21.3483 0.00573897 22.6517 0.00574017 22.9511 0.927051L27.3883 14.5836C27.5222 14.9956 27.9062 15.2746 28.3394 15.2746H42.6987C43.6675 15.2746 44.0702 16.5142 43.2865 17.0836L31.6696 25.5238C31.3191 25.7784 31.1724 26.2298 31.3063 26.6418L35.7436 40.2984C36.0429 41.2197 34.9884 41.9858 34.2047 41.4164L22.5878 32.9762C22.2373 32.7216 21.7627 32.7216 21.4122 32.9762L9.79527 41.4164C9.01155 41.9858 7.95707 41.2197 8.25642 40.2984L12.6937 26.6418C12.8276 26.2298 12.6809 25.7784 12.3304 25.5238L0.713483 17.0836C-0.0702302 16.5142 0.332547 15.2746 1.30127 15.2746H15.6606C16.0938 15.2746 16.4778 14.9956 16.6117 14.5836L21.0489 0.92705Z" />'+
+                              "</svg>"
+                      });
+                      });
+            </script> -->
+            <ul class="list-reset history__star">
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+            </ul>
+            <div class="offer-lk__item-image history__image">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <div class="offer-lk__item-date">10.03.22</div>
+            </div>
+          </li>
+          <li class="offer__item">
+            <ul class="list-reset history__star">
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+            </ul>
+            <div class="offer-lk__item-image history__image">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <div class="offer-lk__item-date">10.03.22</div>
+            </div>
+          </li>
+          <li class="offer__item">
+            <ul class="list-reset history__star">
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+              <li class="history__star-item">
+                <img src="{% static 'img/star.svg' %}" alt="">
+              </li>
+            </ul>
+            <div class="offer-lk__item-image history__image">
+              <img src="{% static 'img/offer-1.png' %}" alt="">
+            </div>
+            <div class="offer__item-content">
+              <div class="offer__item-type">Тип:<span>Роза</span></div>
+              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
+              <div class="offer-lk__item-price">45, 00 Р</div>
+              <div class="offer-lk__item-date">10.03.22</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'include/footer.html' %}
+
+<div class="graph-modal lk-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="{% static 'img/modal-close.svg' %}" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Мои заказы</div>
+      <div class="mymessage__cart-vol">Здравствуйте, как внести баланс на на сайт?</div>
+      <label class="form__label">
+        <textarea type="text" name="Имя" class="form__input lk-modal__textarea" placeholder="Ваше сообщение..."></textarea>
+
+      </label>
+      <button class="btn-reset lk-modal__send" aria-label="Отправить сообщение">
+        <img src="{% static 'img/message-send.svg' %}" alt="">
+      </button>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="{% static 'img/modal-close.svg' %}" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Позвонить</div>
+      <div class="call-modal__phone">+7 999 999-99-99</div>
+      <div class="call-modal__logo">ЦВЕТ<span>РУС</span></div>
+      <a href="tel:+79999999999" class="call-modal__link">позвонить</a>
+    </div>
+  </div>
+</div>
+<div class="ancor">
+  <button class="btn btn-reset ancor__btn" data-graph-path="call">
+    <img src="{% static 'img/ancor-phone.png' %}" alt="">
+  </button>
+  <button class="btn btn-reset ancor__btn" data-graph-path="message">
+    <img src="{% static 'img/ancor-message.png' %}" alt="">
+  </button>
+</div>
+  </div>
+{% endblock %}

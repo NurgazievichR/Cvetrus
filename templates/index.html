@@ -1,0 +1,197 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% include 'include/header.html' %}
+
+<div class="mainscreen" >
+  <div class="container mainscreen__container">
+      <section class="mainscreen__section">
+        <div class="mainscreen__card mainscreen__card-first">
+        <h1 class="title main__title">цвет<span>рус</span></h1>
+        <h2 class="title main__subtitle">МАРКЕТПЛЕЙС</h2>
+        <p class="mainscreen__text">{{settings.description}}</p>
+        <div class="mainscreen__bottom">
+          <ul class="list-reset social__list">
+            <li class="social__item">
+              <a href="{{settings.instagram}}" class="social__link" style="background-image: url({% static 'img/insta-icon.png' %});"></a>
+            </li>
+            <li class="social__item">
+              <a href="https://wa.me/{{settings.phone}}" class="social__link" style="background-image: url({% static 'img/whatsup-icon.png' %});"></a>
+            </li>
+            <li class="social__item">
+              <a href="{{settings.twitter}}" class="social__link" style="background-image: url({% static 'img/twiter-icon.png' %});"></a>
+            </li>
+            <li class="social__item">
+              <a href="{{settings.telegram}}" class="social__link" style="background-image: url({% static 'img/tele-icon.png' %});"></a>
+            </li>
+            <li class="social__item">
+              <a href="{{settings.vkontakte}}" class="social__link" style="background-image: url({% static 'img/vk-icon.png' %});"></a>
+            </li>
+          </ul>
+          <button type='submit' class="btn btn-reset btn__reg scrolll">Зарегистрироваться</button>
+        </div>
+      </div>
+      <div class="mainscreen__counter">01<span>05</span></div>
+      </section>
+      <section class="mainscreen__section mainscreen__section--offer">
+        <div class="mainscreen__card">
+          <h2 class="title mainscreen__title mainscreen__title--offer">Мы предлагаем</h2>
+          <div class="mainscreen-offer">
+            <div class="mainscreen-offer__col">
+              <div class="mainscreen-offer__item">
+                <div class="mainscreen-offer__title mainscreen-offer__title--choice">выбор</div>
+                <div class="mainscreen-offer__text">Широкий выбор проверенных поставщиков, сертифицированный ассортимент низкие цены и свежие цветы</div>
+              </div>
+              <div class="mainscreen-offer__item">
+                <div class="mainscreen-offer__title mainscreen-offer__title--log">логистику</div>
+                <div class="mainscreen-offer__text">Стройте логистику сами — выберите какой склад для получения заказа вам подходит больше</div>
+              </div>
+            </div>
+            <div class="mainscreen-offer__col">
+              <div class="mainscreen-offer__item">
+                <div class="mainscreen-offer__title mainscreen-offer__title--proc">процесс</div>
+                <div class="mainscreen-offer__text">Прозрачный процесс ценообразования — вы увидите цену товара, доставки и цену комиссионного сбора</div>
+              </div>
+              <div class="mainscreen-offer__item">
+                <div class="mainscreen-offer__title mainscreen-offer__title--task">задачу</div>
+                <div class="mainscreen-offer__text">Наша задача — предоставить всем желающим доступ к покупке цветов напрямую от производителя </div>
+              </div>
+            </div>
+            <button class="btn btn-reset btn__reg">подробнее</button>
+          </div>
+        </div>
+        <div class="mainscreen__counter">02<span>05</span></div>
+      </section>
+
+      <section class="mainscreen__section">
+        <div class="mainscreen__card">
+          <h2 class="title mainscreen__title">товары</h2>
+          <div class="mainscreen-goods">
+            <div class="mainscreen-goods__card">
+              <div class="mainscreen-goods__image">
+                <img src="{% static 'img/goods-main1.png' %}" alt="">
+              </div>
+              <div class="mainscreen-goods__content">
+                <div class="mainscreen-goods__text">
+                  <p>Роза сорта</p>
+                  <p>Ред Наоми</p>
+                </div>
+                <div class="mainscreen-goods__price">45, 00 Р</div>
+              </div>
+            </div>
+            <div class="mainscreen-goods__card">
+              <div class="mainscreen-goods__image">
+                <img src="{% static 'img/goods-main2.png' %}" alt="">
+              </div>
+              <div class="mainscreen-goods__content">
+                <div class="mainscreen-goods__text">
+                  <p>Роза сорта</p>
+                  <p>Аваланж</p>
+                </div>
+                <div class="mainscreen-goods__price">45, 00 Р</div>
+              </div>
+            </div>
+            <div class="mainscreen-goods__card">
+              <div class="mainscreen-goods__image">
+                <img src="{% static 'img/goods-main3.png' %}" alt="">
+              </div>
+              <div class="mainscreen-goods__content">
+                <div class="mainscreen-goods__text">
+                  <p>Роза сорта</p>
+                  <p>Аваланж Питч</p>
+                </div>
+                <div class="mainscreen-goods__price">45, 00 Р</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mainscreen__counter">03<span>05</span></div>
+      </section>
+
+      <section class="mainscreen__section mainscreen__section--about">
+        <div class="mainscreen__card mainscreen__card--about">
+          <h2 class="title mainscreen__title mainscreen__title--about">о нас</h2>
+          <div class="mainscreen__subtitle mainscreen__subtitle--about">Ценности и приоритеты компании:</div>
+          <div class="mainscreen-about" >
+            <div class="mainscreen-about__card">
+              <div class="mainscreen-about__card-title">доступность</div>
+              <div class="mainscreen-about__card-text">Сервис, в котором каждый зарегистированный покупатель или продавец может купить или продать цветы, используя данную платформу</div>
+            </div>
+            <div class="mainscreen-about__card">
+              <div class="mainscreen-about__card-title">открытость</div>
+              <div class="mainscreen-about__card-text">Выступаем за прозрачный процесс ценообразования для наших клиентов — вы видите цену товара, доставки и агентского сбора при покупке</div>
+            </div>
+            <div class="mainscreen-about__card">
+              <div class="mainscreen-about__card-title">мобильность </div>
+              <div class="mainscreen-about__card-text">Возможность любого выбора склада для получения заказа — удобная локация для отгрузки и ожидания уведомления о готовности заказа</div>
+            </div>
+            <div class="mainscreen-about__card">
+              <div class="mainscreen-about__card-title">доверие</div>
+              <div class="mainscreen-about__card-text">Преследуем цель сделать процесс закупки и продажи цветов максимально удобным, предоставляя эту возможность каждому участнику рынка</div>
+            </div>
+          </div>
+        </div>
+        <div class="mainscreen__counter">04<span>05</span></div>
+      </section>
+      <section class="mainscreen__section ">
+        <div class="mainscreen__card mainscreen__card--reg">
+          <h2 class="title mainscreen__title mainscreen__title--reg">регистрация</h2>
+          <div class="mainscreen-reg" >
+            <div class="mainscreen-reg__image">
+              <!-- <img src="img/mainreg.svg" alt=""> -->
+            </div>
+            <div class="mainscreen-reg__buttons">
+              <a href="{% url 'B_reg' %}" class="btn btn-reset btn__mainreg">как покупатель</a>
+              <a href="saler-reg.html" class="btn btn-reset btn__mainreg">как продавец</a>
+            </div>
+            <ul class="list-reset social__list social__list--vertical">
+              <li class="social__item">
+                <a href="{{settings.instagram}}" class="social__link" style="background-image: url({% static 'img/insta-icon.png' %});"></a>
+              </li>
+              <li class="social__item">
+                <a href="https://wa.me/{{settings.phone}}" class="social__link" style="background-image: url({% static 'img/whatsup-icon.png' %});"></a>
+              </li>
+              <li class="social__item">
+                <a href="{{settings.twitter}}" class="social__link" style="background-image: url({% static 'img/twiter-icon.png' %});"></a>
+              </li>
+              <li class="social__item">
+                <a href="{{settings.telegram}}" class="social__link" style="background-image: url({% static 'img/tele-icon.png' %});"></a>
+              </li>
+              <li class="social__item">
+                <a href="{{settings.vkontakte}}" class="social__link" style="background-image: url({% static 'img/vk-icon.png' %});"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mainscreen__counter">05<span>05</span></div>
+      </section>
+    </div>
+</div>
+    <footer class="footer footer-noreg">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="" class="footer__politics">Политика конфиденциальности</a>
+      <ul class="list-reset social__list">
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/insta-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/whatsup-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/twiter-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/tele-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/vk-icon.png);"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</div>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% load static %}
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="" class="footer__politics">Политика конфиденциальности</a>
+        <ul class="list-reset social__list">
+          <li class="social__item">
+            <a href="{{settings.instagram}}" class="social__link" style="background-image: url({% static 'img/insta-icon.png' %});"></a>
+          </li>
+          <li class="social__item">
+            <a href="https://wa.me/{{settings.phone}}" class="social__link" style="background-image: url({% static 'img/whatsup-icon.png' %});"></a>
+          </li>
+          <li class="social__item">
+            <a href="{{settings.twitter}}" class="social__link" style="background-image: url({% static 'img/twiter-icon.png' %});"></a>
+          </li>
+          <li class="social__item">
+            <a href="{{settings.telegram}}" class="social__link" style="background-image: url({% static 'img/tele-icon.png' %});"></a>
+          </li>
+          <li class="social__item">
+            <a href="{{settings.vkontakte}}" class="social__link" style="background-image: url({% static 'img/vk-icon.png' %});"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,147 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="site-container">
+    <header class="header header-lk">
+  <div class="container">
+    <div class="header__inner">
+      <a href="lk.html" class="header__logo">
+        <img src="img/logo-small.svg" alt="">
+        <div class="header__logo-text">цвет<span>рус</span></div>
+      </a>
+      <nav class="nav" title="" data-menu>
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
+          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
+          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
+          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
+        </ul>
+      </nav>
+      <label class="form__label header-lk__search">
+        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
+      </label>
+      <a href="tel:" class="header-lk__phone"></a>
+      <a href="lk-page.html" class="btn-reset header__login"></a>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+    <div class="table">
+  <div class="container">
+    <div class="table__inner">
+      <h2 class="title table__title">История покупок</h2>
+      <ul class="table__wrapper">
+        <a href="#" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+        <a href="" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+        <a href="" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+        <a href="" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+        <a href="" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+        <a href="" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+        <a href="" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+        <a href="" class="list-reset table__row">
+          <div class="table__row-name">Роза сорта Аваланж Питч</div>
+          <div class="table__row-price">1000, 00 Р</div>
+          <div class="table__row-date">10.03.2022</div>
+        </a>
+      </ul>
+    </div>
+
+  </div>
+</div>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="" class="footer__politics">Политика конфиденциальности</a>
+      <ul class="list-reset social__list">
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/insta-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/whatsup-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/twiter-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/tele-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/vk-icon.png);"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="graph-modal lk-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Мои заказы</div>
+      <div class="mymessage__cart-vol">Здравствуйте, как внести баланс на на сайт?</div>
+      <label class="form__label">
+        <textarea type="text" name="Имя" class="form__input lk-modal__textarea" placeholder="Ваше сообщение..."></textarea>
+
+      </label>
+      <button class="btn-reset lk-modal__send" aria-label="Отправить сообщение">
+        <img src="img/message-send.svg" alt="">
+      </button>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Позвонить</div>
+      <div class="call-modal__phone">+7 999 999-99-99</div>
+      <div class="call-modal__logo">ЦВЕТ<span>РУС</span></div>
+      <a href="tel:+79999999999" class="call-modal__link">позвонить</a>
+    </div>
+  </div>
+</div>
+    <div class="ancor">
+  <button class="btn btn-reset ancor__btn" data-graph-path="call">
+    <img src="{% static 'img/ancor-phone.png' %}" alt="">
+  </button>
+  <button class="btn btn-reset ancor__btn" data-graph-path="message">
+    <img src="{% static 'img/ancor-message.png' %}" alt="">
+  </button>
+</div>
+  </div>
+{% endblock %}

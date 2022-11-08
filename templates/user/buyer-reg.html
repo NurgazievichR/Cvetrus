@@ -1,0 +1,37 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'include/header.html' %}
+
+<div class="regform">
+  <div class="container">
+    <div class="regform__inner">
+      <h2 class="title regform__title">я — покупатель </h2>
+      <form method="POST" class="form regform__form">
+        {% csrf_token %}
+        <div class="regform-left">
+       
+          {% for f in form %}
+          {% if not f.label == 'Фото' %}
+          {{f.errors}}
+          <label class="form__label">{{f}}</label>
+          {% endif %}
+          {% endfor %}
+          
+        </div>
+        <div class="regform-right">
+          <label class="form__label form__label-file">
+            {{form.photo.errors}}
+            {{form.photo}}
+          </label>
+          <button class="btn btn-reset regform__btn">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% include 'include/footer.html' %}
+
+  </div>
+{% endblock %}

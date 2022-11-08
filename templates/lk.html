@@ -1,0 +1,249 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="site-container">
+    <header class="header header-lk">
+  <div class="container">
+    <div class="header__inner">
+      <a href="lk.html" class="header__logo">
+        <img src="img/logo-small.svg" alt="">
+        <div class="header__logo-text">цвет<span>рус</span></div>
+      </a>
+      <nav class="nav" title="" data-menu>
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
+          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
+          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
+          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
+        </ul>
+      </nav>
+      <label class="form__label header-lk__search">
+        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
+      </label>
+      <a href="tel:" class="header-lk__phone"></a>
+      <a href="lk-page.html" class="btn-reset header__login"></a>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+    <div class="offer">
+  <div class="container">
+    <div class="offer__wrapper">
+      <h2 class="title offer__title">Предложения</h2>
+      <ul class="list-reset offer__list">
+        <li class="offer__item">
+          <div class="offer__item-image">
+            <img src="img/offer-1.png" alt="">
+          </div>
+          <div class="offer__item-content">
+            <div class="offer__item-type">Тип:<span>Роза</span></div>
+            <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+            <div class="offer__item-color">Цвет:<span>Красный</span></div>
+            <div class="offer__item-price">45, 00 Р</div>
+            <button class="btn btn-reset offer__item-btn"></button>
+          </div>
+        </li>
+        <li class="offer__item">
+          <div class="offer__item-image">
+            <img src="img/offer-2.png" alt="">
+          </div>
+          <div class="offer__item-content">
+            <div class="offer__item-type">Тип:<span>Роза</span></div>
+            <div class="offer__item-sort">Сорт:<span>Аваланж</span></div>
+            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+            <div class="offer__item-color">Цвет:<span>Красный</span></div>
+            <div class="offer__item-price">45, 00 Р</div>
+            <button class="btn btn-reset offer__item-btn"></button>
+          </div>
+        </li>
+        <li class="offer__item">
+          <div class="offer__item-image">
+            <img src="img/offer-3.png" alt="">
+          </div>
+          <div class="offer__item-content">
+            <div class="offer__item-type">Тип:<span>Роза</span></div>
+            <div class="offer__item-sort">Сорт:<span>Аваланж Питч</span></div>
+            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+            <div class="offer__item-color">Цвет:<span>Красный</span></div>
+            <div class="offer__item-price">45, 00 Р</div>
+            <button class="btn btn-reset offer__item-btn"></button>
+          </div>
+        </li>
+      </ul>
+      <a href="" class="btn btn-reset offer__btn">подробнее</a>
+    </div>
+  </div>
+</div>
+    <div class="offer">
+  <div class="container">
+    <div class="offer__wrapper">
+      <h2 class="title offer__title">Мои заказы</h2>
+      <ul class="list-reset offer__list">
+        <li class="offer__item">
+          <div class="offer__item-image">
+            <img src="img/offer-1.png" alt="">
+          </div>
+          <div class="offer__item-content">
+            <div class="offer__item-type">Тип:<span>Роза</span></div>
+            <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
+            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+            <div class="offer__item-color">Цвет:<span>Красный</span></div>
+            <div class="offer__item-price">45, 00 Р</div>
+          </div>
+        </li>
+        <li class="offer__item">
+          <div class="offer__item-image">
+            <img src="img/offer-2.png" alt="">
+          </div>
+          <div class="offer__item-content">
+            <div class="offer__item-type">Тип:<span>Роза</span></div>
+            <div class="offer__item-sort">Сорт:<span>Аваланж</span></div>
+            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
+            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
+            <div class="offer__item-color">Цвет:<span>Красный</span></div>
+            <div class="offer__item-price">45, 00 Р</div>
+          </div>
+        </li>
+        <li class="offer__item offer__item--empty">
+          <div class="offer__item-image">
+            <!-- <img src="img/offer-3.png" alt=""> -->
+          </div>
+          <div class="offer__item-content">
+            <div class="offer__item-type">Тип:<span></span></div>
+            <div class="offer__item-sort">Сорт:<span> </span></div>
+            <div class="offer__item-length">Длина стебля:<span> </span></div>
+            <div class="offer__item-place">Плантация:<span></span></div>
+            <div class="offer__item-color">Цвет:<span></span></div>
+            <div class="offer__item-price"> </div>
+          </div>
+        </li>
+      </ul>
+      <a href="lk-offer.html" class="btn btn-reset offer__btn">посмотреть</a>
+    </div>
+  </div>
+</div>
+    <div class="mywallet">
+  <div class="container">
+    <div class="mywallet__wrapper">
+      <h2 class="title mywallet__title">Мой кошелёк</h2>
+      <div class="mywallet__inner">
+        <div class="mywallet__cart">
+          <div class="mywallet__cart-name">Баланс</div>
+          <div class="mywallet__cart-vol">15 000, 00 Р</div>
+        </div>
+        <ul class="list-reset mywallet__list">
+          <li class="mywallet__item">
+            <a href="" class="mywallet__cart-link">Пополнение баланса </a>
+          </li>
+          <li class="mywallet__item">
+            <a href="" class="mywallet__cart-link">История транзакций</a>
+          </li>
+          <li class="mywallet__item">
+            <a href="" class="mywallet__cart-link">История покупок</a>
+          </li>
+        </ul>
+
+      </div>
+      <a href="add-balance.html" class="btn btn-reset mywallet__btn">перейти</a>
+    </div>
+  </div>
+</div>
+    <div class="mymessage">
+  <div class="container">
+    <div class="mymessage__wrapper">
+      <h2 class="title mymessage__title">Сообщения</h2>
+      <div class="mymessage__inner">
+        <div class="mymessage__cart">
+          <div class="mymessage__cart-name">Здравствуйте, какие у вас вопросы?</div>
+          <div class="mymessage__cart-vol">Здравствуйте, как внести баланс на на сайт?</div>
+        </div>
+        <ul class="list-reset mymessage__list">
+          <li class="mymessage__item">
+            <a href="" class="mymessage__cart-link">Ответим быстро </a>
+          </li>
+          <li class="mymessage__item">
+            <a href="" class="mymessage__cart-link">Объясним просто</a>
+          </li>
+          <li class="mymessage__item">
+            <a href="" class="mymessage__cart-link">Сориентируем</a>
+          </li>
+        </ul>
+      </div>
+      <a href="message.html" class="btn btn-reset mymessage__btn"">перейти</a>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="" class="footer__politics">Политика конфиденциальности</a>
+      <ul class="list-reset social__list">
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/insta-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/whatsup-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/twiter-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/tele-icon.png);"></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" style="background-image: url(img/vk-icon.png);"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="graph-modal lk-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Мои заказы</div>
+      <div class="mymessage__cart-vol">Здравствуйте, как внести баланс на на сайт?</div>
+      <label class="form__label">
+        <textarea type="text" name="Имя" class="form__input lk-modal__textarea" placeholder="Ваше сообщение..."></textarea>
+
+      </label>
+      <button class="btn-reset lk-modal__send" aria-label="Отправить сообщение">
+        <img src="img/message-send.svg" alt="">
+      </button>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <img src="img/modal-close.svg" alt="">
+    </button>
+    <div class="graph-modal-content">
+      <div class="lk-modal__title">Позвонить</div>
+      <div class="call-modal__phone">+7 999 999-99-99</div>
+      <div class="call-modal__logo">ЦВЕТ<span>РУС</span></div>
+      <a href="tel:+79999999999" class="call-modal__link">позвонить</a>
+    </div>
+  </div>
+</div>
+    <div class="ancor">
+  <button class="btn btn-reset ancor__btn" data-graph-path="call">
+    <img src="img/ancor-phone.png" alt="">
+  </button>
+  <button class="btn btn-reset ancor__btn" data-graph-path="message">
+    <img src="img/ancor-message.png" alt="">
+  </button>
+</div>
+  </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'include/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="site-container">
+    <header class="header header-lk">
+  <div class="container">
+    <div class="header__inner">
+      <a href="lk.html" class="header__logo">
+        <img src="img/logo-small.svg" alt="">
+        <div class="header__logo-text">цвет<span>рус</span></div>
+      </a>
+      <nav class="nav" title="" data-menu>
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
+          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
+          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
+          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
+        </ul>
+      </nav>
+      <label class="form__label header-lk__search">
+        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
+      </label>
+      <a href="tel:" class="header-lk__phone"></a>
+      <a href="lk-page.html" class="btn-reset header__login"></a>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+    <div class="regform">
+  <div class="container">
+    <div class="regform__inner">
+      <h2 class="title lk-page__title">Личный кабинет</h2>
+      <form action="#" class="form regform__form">
+        <input type="hidden" name="theme" value="Обратный звонок">
+        <input type="hidden" name="admin_email[]" value="">
+        <input type="hidden" name="form_subject" value="Заявка с сайта">
+        <div class="regform-left">
+          <label class="form__label">
+            <input type="text" name="имя" class="form__input" placeholder="Пупкин Александр Валентинович">
+          </label>
+          <label class="form__label">
+            <input type="mail" name="Почта" class="form__input" placeholder="dadfar@mail.ru">
+          </label>
+          <label class="form__label">
+            <input type="text" name="телефон" class="form__input" placeholder="+7 999 999 99 99">
+          </label>
+          <label class="form__label">
+            <input type="text" name="id" class="form__input" placeholder="2344 4444 5555 6666 6666">
+          </label>
+          <label class="form__label">
+            <input type="text" name="Адрес" class="form__input" placeholder="г. Москва, ул. Ленина, дом 15">
+          </label>
+          <label class="form__label textarea__lk-label">
+            <textarea type="text" name="Имя" class="form__input" placeholder="Описание компании"></textarea>
+          </label>
+        </div>
+        <div class="regform-right">
+          <label class="form__label form__label-file">
+            <input type="file" name="Имя" class="form__input form__input-file" placeholder="">
+          </label>
+          <!-- <button class="btn btn-reset regform__btn">Зарегистрироваться</button> -->
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+{% include 'include/footer.html' %}
+
+  </div>
+{% endblock %}
