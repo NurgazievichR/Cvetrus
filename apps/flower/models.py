@@ -34,11 +34,13 @@ class Flower(models.Model):
         ('Фиолетовый','Фиолетовый'),
     ]
     title = models.CharField('Название',max_length=15)
+    description = models.CharField(max_length=100, null=True, blank=True)
     image = models.ImageField('Фото', upload_to='media')
     sort = models.ForeignKey(Sort, on_delete=models.SET_NULL, null=True, verbose_name='Сорт')
     plantation = models.ForeignKey(Plantation, on_delete=models.SET_NULL, null=True, verbose_name='Плантация')
-    length = models.CharField('Длина', max_length=15, choices=[(str(i),str(i)) for i in range(10, 101, 20)])
+    length = models.CharField('Длина', max_length=15, choices=[(str(i),str(i)) for i in range(30, 101, 20)])
     color = models.CharField('Цвет', max_length=15, choices=COLORS)
+    isable_count = models.PositiveBigIntegerField('Есть в наличии', default=10)
     price = models.DecimalField('Цена',decimal_places=2, max_digits=10)
     views = models.PositiveBigIntegerField('Просмотры', default=0)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='users_flowers', verbose_name='Владелец')

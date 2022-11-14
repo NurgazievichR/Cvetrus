@@ -2,161 +2,70 @@
 {% load static %}
 {% block content %}
   <div class="site-container">
-    <header class="header header-lk">
-  <div class="container">
-    <div class="header__inner">
-      <a href="lk.html" class="header__logo">
-        <img src="img/logo-small.svg" alt="">
-        <div class="header__logo-text">цвет<span>рус</span></div>
-      </a>
-      <nav class="nav" title="" data-menu>
-        <ul class="list-reset nav__list">
-          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
-          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
-          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
-          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
-        </ul>
-      </nav>
-      <label class="form__label header-lk__search">
-        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
-      </label>
-      <a href="tel:" class="header-lk__phone"></a>
-      <a href="lk-page.html" class="btn-reset header__login"></a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
-        <span class="burger__line"></span>
-      </button>
-    </div>
-  </div>
-
-</header>
+{% include 'include/b_header.html' %}
 
     <div class="offer-lk single">
   <div class="container">
     <div class="offer-lk__wrapper">
       <div class="offer-lk__content single__content">
         <div class="single__image">
-          <img src="{% static 'img/offer-1.png' %}" alt="">
+          <img src="{{flower.image.url}}" alt="">
         </div>
         <div class="single__right">
-          <h2 class="title single__title">Роза сорта Ред Наоми</h2>
+          <h2 class="title single__title">{{flower.title}} сорта {{flower.sort}}</h2>
           <div class="single__filter">
             <div class="single__filter-title">Размер</div>
             <ul class="list-reset single__filter-list">
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="size" id="">
-                  <p>40</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="size" id="">
-                  <p>50</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="size" id="">
-                  <p>60</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="size" id="" checked>
-                  <p>70</p>
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div class="single__filter">
-            <div class="single__filter-title">Количество</div>
-            <ul class="list-reset single__filter-list">
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="value" id="">
-                  <p>50</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="value" id="">
-                  <p>70</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="value" id="">
-                  <p>100</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="value" id="" checked>
-                  <p>150</p>
-                </label>
-              </li>
+                {% for i in length %}
+                <li class="single__filter-item">
+                  <label>
+                    {% if flower.length == i %}
+                    <p style='background-color:#02BC08;color:#fff;'>{{i}}</p>
+                    {% else %}
+                    <p>{{i}}</p>
+                    {% endif %}
+                  </label>
+                </li>
+                {% endfor %}
             </ul>
           </div>
           <div class="single__place">
             <div class="single__place-title">Плантация</div>
-            <div class="single__place-name">albert</div>
+            <div class="single__place-name">{{flower.plantation}}</div>
           </div>
           <div class="single__color">
             <div class="single__color-title">Цвет</div>
-            <div class="single__color-name">Красный</div>
+            <div class="single__color-name">{{flower.color}}</div>
           </div>
-          <div class="single__filter">
-            <div class="single__filter-title">Кол-во цветов в пачке (штук)</div>
+          {% comment %} <div class="single__filter">
+            <div class="single__filter-title">Есть в наличии</div>
             <ul class="list-reset single__filter-list">
               <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="qu" id="">
-                  <p>10</p>
+                <label >
+                  <p style='font-size:55px;background-color:#02BC08; color:white;'>{{flower.isable_count}}</p> 
                 </label>
               </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="qu" id="">
-                  <p>20</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="qu" id="">
-                  <p>25</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="qu" id="" checked>
-                  <p>30</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="qu" id="">
-                  <p>35</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="qu" id="">
-                  <p>40</p>
-                </label>
-              </li>
-              <li class="single__filter-item">
-                <label>
-                  <input class="check-box" type="radio" name="qu" id="" checked>
-                  <p>50</p>
-                </label>
-              </li>
+
             </ul>
+          </div> {% endcomment %}
+          <div class="single__color">
+            <div class="single__color-title">Есть в наличии</div>
+            <div class="single__color-name">{{flower.isable_count}} штук</div>
           </div>
-          <div class="single__descr">
+
+
+
+
+
+
+          <div style='margin-top:20px;' class="single__descr">
+            {% if flower.description %}
             <div class="single__descr-title">Описание:</div>
-            <div class="single__descr-text">Древесное многолетнее цветущее растение рода Rosa, в семействе Rosaceae, или цветок, который он несет. Насчитывается более трех сотен видов и десятки тысяч из сортов.</div>
+            <div class="single__descr-text">{{flower.description}}</div>
+            {% endif %}
+
           </div>
-          <div class="single__price">45, 00 Р</div>
+          <div class="single__price">{{flower.price}} Р</div>
           <button class="btn btn-reset single__btn">купить</button>
         </div>
       </div>
@@ -164,35 +73,12 @@
   </div>
 </div>
 
-    <footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <a href="" class="footer__politics">Политика конфиденциальности</a>
-      <ul class="list-reset social__list">
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/insta-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/whatsup-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/twiter-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/tele-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/vk-icon.png);"></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
+{% include 'include/footer.html' %}
 
 <div class="graph-modal lk-modal">
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
     <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
-      <img src="img/modal-close.svg" alt="">
+      <img src="{% static 'img/modal-close.svg' %}" alt="">
     </button>
     <div class="graph-modal-content">
       <div class="lk-modal__title">Мои заказы</div>
@@ -202,14 +88,14 @@
 
       </label>
       <button class="btn-reset lk-modal__send" aria-label="Отправить сообщение">
-        <img src="img/message-send.svg" alt="">
+        <img src="{% static 'img/message-send.svg' %}" alt="">
       </button>
     </div>
   </div>
 
   <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
     <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
-      <img src="img/modal-close.svg" alt="">
+      <img src="{% static 'img/modal-close.svg' %}" alt="">
     </button>
     <div class="graph-modal-content">
       <div class="lk-modal__title">Позвонить</div>
@@ -221,10 +107,10 @@
 </div>
     <div class="ancor">
   <button class="btn btn-reset ancor__btn" data-graph-path="call">
-    <img src="img/ancor-phone.png" alt="">
+    <img src="{% static 'img/ancor-phone.png' %}" alt="">
   </button>
   <button class="btn btn-reset ancor__btn" data-graph-path="message">
-    <img src="img/ancor-message.png" alt="">
+    <img src="{% static 'img/ancor-message.png' %}" alt="">
   </button>
 </div>
   </div>

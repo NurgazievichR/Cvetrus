@@ -1,41 +1,19 @@
 {% extends 'include/base.html' %}
 {% load static %}
 {% block content %}
-  <div class="site-container">
-    <header class="header header-lk">
-  <div class="container"> 
-    <div class="header__inner">
-      <a href="lk.html" class="header__logo">
-        <img src="{% static 'img/logo-small.svg' %}" alt="">
-        <div class="header__logo-text">цвет<span>рус</span></div>
-      </a>
-      <nav class="nav" title="" data-menu>
-        <ul class="list-reset nav__list">
-          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
-          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
-          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
-          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
-        </ul>
-      </nav>
-      <label class="form__label header-lk__search">
-        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
-      </label>
-      <a href="tel:" class="header-lk__phone"></a>
-      <a href="lk-page.html" class="btn-reset header__login"></a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
-        <span class="burger__line"></span>
-      </button>
-    </div>
-  </div>
 
-</header>
+<script defer src="{% static 'js/roma.js'  %}"></script>
+
+<div class="site-container">
+
+{% include 'include/b_header.html' %}
 
     <div class="offer-lk">
   <div class="container container-wide">
     <div class="offer-lk__wrapper">
-      <div class="offer-lk__filter filter">
+      <div class="offer-lk__filter filter" style="height:1000px;">
         <h2 class="title offer-lk__title">Фильтры</h2>
-        <div class="tabs" data-tabs="filter-tab">
+        <div class="tabs"  data-tabs="filter-tab">
           <ul class="list-reset tabs__nav">
             <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">плантация</button></li>
             <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">тип</button></li>
@@ -45,599 +23,131 @@
           </ul>
           <div class="tabs__content">
             <div class="tabs__panel">
-              <label class="filter__search-label">
-                <input type="text" name="компания" class="filter__search-input" placeholder="">
-              </label>
+
+
+              <form>
+                <label class="filter__search-label">
+                  <button name='search_button' style="background:none; border:none;" type='submit' class="filter__search-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                  </button>
+                    <input type="text" name="search-field" style='padding-left:3rem;' class="filter__search-input" placeholder="">
+                </label>
+              </form>
+              
+
+
+
+
+
               <ul class="list-reset filter__list " data-simplebar >
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
+                <form><button class="filter_button" style="border: 0px; {% if 'all' in choices_|slice:'0:1' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}"
+                  name='plantation_choice' value="plantation_all" >Все</button></form>
                 </li>
+                {% for plantation in plantations  %}
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
+                <form><button class="filter_button" style="border: 0px; border-radius:10px;{% if plantation.title in choices_|slice:'0:1' %}background-color:#02BC08;{% else %}background-color:#fff;{% endif %}"
+                  name='plantation_choice' value="{{plantation.id}}" >{{plantation.title}}</button></form>
                 </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
+                {% endfor %}
+                
+
+                <form>
+                  <div style="margin-top:20px;" class="range-filter">
+                    <div class="price-controls" style='display:flex;'>
+
+                        от <input name='from_price' style='width:130px;border-radius:10px;margin-left:5px;' class="min-price" type="number" value='{{min_price  }}'>
+
+                        <div style='margin-left:2px;'>
+
+                          до <input name="to_price" style='width:130px;border-radius:10px;' class="max-price" type="number" value='{{max_price}}'>
+
+                        </div>
+                    </div>
+                    <button name='price_sort' style="margin-top:25px; height:100px;cursor:pointer;" type="submit" class="btn btn-success">Сортировать по цене</button>
+                </div>
+                </form>
+                
+
+
+
+                
+                
               </ul>
-              <div class="filter__output">
-                <div class="filter__output-name">плантация</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">размер</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">тип</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">сорт</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
+              
+{% include 'p_components/choices.html' %}
+            </div>
+            <div class="tabs__panel">
+              <label class="filter__search-label">
+                <input type="text" name="компания" class="filter__search-input" placeholder="">
+              </label>
+              <ul class="list-reset filter__list" data-simplebar>   
+                <li class="filter__item">
+                  <form><button class="filter_button" style="border: 0px; {% if 'all' in choices_|slice:'1:2' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}"name='type_choice' value="type_all" >Все</button></form>
+                  </li>
+                {% for type in types  %}
+                  <li class="filter__item">
+                  <form><button class="filter_button" style="border: 0px; {% if type in choices_|slice:'1:2' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}" name='type_choice' value="{{type}}" >{{type}}</button></form>
+                  </li>
+                {% endfor %}
+              </ul>
+{% include 'p_components/choices.html' %}
             </div>
             <div class="tabs__panel">
               <label class="filter__search-label">
                 <input type="text" name="компания" class="filter__search-input" placeholder="">
               </label>
               <ul class="list-reset filter__list" data-simplebar>
+                
+
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
+                  <form><button class="filter_button" style="border: 0px;{% if 'all' in choices_|slice:'2:3' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}" name='sort_choice' value="sort_all" >Все</button></form>
                 </li>
+                {% for sort in sorts %}
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
+                  <form><button class="filter_button" style="border: 0px;{% if sort.title in choices_|slice:'2:3' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}" name='sort_choice' value="{{sort.id}}" >{{sort}}</button></form>
                 </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
+                {% endfor %}
+
               </ul>
-              <div class="filter__output">
-                <div class="filter__output-name">плантация</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">размер</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">тип</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">сорт</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
+{% include 'p_components/choices.html' %}
             </div>
             <div class="tabs__panel">
               <label class="filter__search-label">
                 <input type="text" name="компания" class="filter__search-input" placeholder="">
               </label>
               <ul class="list-reset filter__list" data-simplebar>
+                
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
+                  <form><button class="filter_button" style="border: 0px;{% if 'all' in choices_|slice:'3:4' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}" name='length_choice' value="length_all" >Все</button></form>
+                  </li>
+                {% for leng in length %} 
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
+                  <form><button class="filter_button" style="border: 0px; {% if leng in choices_|slice:'3:4' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}" name='length_choice' value="{{leng}}" >{{leng}}</button></form>
                 </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
+                {% endfor %}
               </ul>
-              <div class="filter__output">
-                <div class="filter__output-name">плантация</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">размер</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">тип</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">сорт</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
+            {% include 'p_components/choices.html' %}
             </div>
             <div class="tabs__panel">
               <label class="filter__search-label">
                 <input type="text" name="компания" class="filter__search-input" placeholder="">
               </label>
               <ul class="list-reset filter__list" data-simplebar>
+                
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
+                  <form><button class="filter_button" style="border: 0px; {% if 'all' in choices_|slice:'4:5' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}" name='color_choice' value="color_all" >Все</button></form>
                 </li>
+                {% for color in colors %}
                 <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
+                  <form><button class="filter_button" style="border: 0px;{% if color in choices_|slice:'4:5' %}background-color:#02BC08; border-radius:10px;{% else %}background-color:#fff;{% endif %}" name='color_choice' value="{{color}}" >{{color}}</button></form>
                 </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
+                {% endfor %}
+
               </ul>
-              <div class="filter__output">
-                <div class="filter__output-name">плантация</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">размер</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">тип</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">сорт</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-            </div>
-            <div class="tabs__panel">
-              <label class="filter__search-label">
-                <input type="text" name="компания" class="filter__search-input" placeholder="">
-              </label>
-              <ul class="list-reset filter__list" data-simplebar>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label>
-                    <input class="check-box" type="checkbox" name="" id="">
-                    <p>все</p>
-                  </label>
-                </li>
-              </ul>
-              <div class="filter__output">
-                <div class="filter__output-name">плантация</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">размер</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">тип</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
-              <div class="filter__output">
-                <div class="filter__output-name">сорт</div>
-                <button class="btn-reset filter__output-btn">все</button>
-              </div>
+{% include 'p_components/choices.html' %}
             </div>
           </div>
         </div>
@@ -645,122 +155,44 @@
       <div class="offer-lk__content">
         <h2 class="title offer-lk__title">Предложения</h2>
         <ul class="list-reset offer-lk__list" >
+
+          
+          {% for flower in flowers %}
+            
           <li class="offer__item">
             <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
+              <img src="{{flower.image.url}}" alt="...">
             </div>
             <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
+              <div class="offer__item-type">Тип:<span> {{flower.title}} </span></div>
+              <div class="offer__item-sort">Сорт:<span> {{flower.sort}} </span></div>
+              <div class="offer__item-length"> Длина стебля: <span> {{flower.length}} см </span></div>
+              <div class="offer__item-place">Плантация:<span> {{flower.plantation}} </span></div>
+              <div class="offer-lk__item-color">Цвет:<span> {{flower.color}} </span></div>
+              <div class="offer-lk__item-price"> {{flower.price}} Р </div>
+              <a href="{% url 'single_product' flower.id %}" class="btn btn-reset offer-lk__item-btn"></a>
             </div>
           </li>
-          <li class="offer__item">
-            <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
-            </div>
-            <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
-            </div>
-          </li>
-          <li class="offer__item">
-            <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
-            </div>
-            <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
-            </div>
-          </li>
-          <li class="offer__item">
-            <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
-            </div>
-            <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
-            </div>
-          </li>
-          <li class="offer__item">
-            <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
-            </div>
-            <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
-            </div>
-          </li>
-          <li class="offer__item">
-            <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
-            </div>
-            <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
-            </div>
-          </li>
-          <li class="offer__item">
-            <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
-            </div>
-            <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
-            </div>
-          </li>
-          <li class="offer__item">
-            <div class="offer-lk__item-image">
-              <img src="{% static 'img/offer-1.png' %}" alt="">
-            </div>
-            <div class="offer__item-content">
-              <div class="offer__item-type">Тип:<span>Роза</span></div>
-              <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-              <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-              <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-              <div class="offer-lk__item-color">Цвет:<span>Красный</span></div>
-              <div class="offer-lk__item-price">45, 00 Р</div>
-              <a href="lk-single.html" class="btn btn-reset offer-lk__item-btn"></a>
-            </div>
-          </li>
+          
+          {% endfor %}
+
         </ul>
       </div>
     </div>
-    <a href="" class="btn btn-reset offer-lk__btn">раскрыть</a>
+    <div style="width: 79%; margin-left: auto; margin-right: 10px; display: flex; justify-content: space-between; align-items: center;">
+      {% if flowers.has_previous %}
+      <a href="?page={{ flowers.previous_page_number }}" style="background: #02BC08; padding: 10px 2rem; color: white; border-radius: 15px;" >Предыдущий</a>
+      {% endif %}
+      <ul style="list-style: none; display: flex; align-items: center; gap: 1.5rem;">
+      {% for i in num_pages %}  
+      <a href='?page={{i}}'><li style="cursor: pointer;background: #02BC08;color: white;border-radius: 15px;padding: 3px 28px;">{{i}}</li></a>
+      {% endfor %}
+      </ul>
+      {% if flowers.has_next %}
+      <a href="?page={{ flowers.next_page_number }}" style="background: #02BC08; padding: 10px 2rem; color: white; border-radius: 15px;">Следущий</a>
+      {% endif %}
+    </div>
+
   </div>
 </div>
 
@@ -805,4 +237,15 @@
   </button>
 </div>
   </div>
+
+
+
+<script>
+
+
+</script>
+
+
+
+
 {% endblock %}

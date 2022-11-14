@@ -2,83 +2,54 @@
 {% load static %}
 {% block content %}
   <div class="site-container">
-    <header class="header header-lk">
-  <div class="container">
-    <div class="header__inner">
-      <a href="lk.html" class="header__logo">
-        <img src="img/logo-small.svg" alt="">
-        <div class="header__logo-text">цвет<span>рус</span></div>
-      </a>
-      <nav class="nav" title="" data-menu>
-        <ul class="list-reset nav__list">
-          <li class="nav__item"><a href="lk-offer.html" class="nav__link">предложения</a></li>
-          <li class="nav__item"><a href="history-order.html" class="nav__link">заказы</a></li>
-          <li class="nav__item"><a href="message.html" class="nav__link nav__link--active">сообщения</a></li>
-          <li class="nav__item"><a href="add-balance.html" class="nav__link">кошелёк </a></li>
-        </ul>
-      </nav>
-      <label class="form__label header-lk__search">
-        <input type="text" name="Имя" class="form__input header-lk__serch-input" placeholder="Поиск по сайту">
-      </label>
-      <a href="tel:" class="header-lk__phone"></a>
-      <a href="lk-page.html" class="btn-reset header__login"></a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
-        <span class="burger__line"></span>
-      </button>
-    </div>
-  </div>
 
-</header>
+    {% include 'include/b_header.html' %}
 
     <div class="offer">
   <div class="container">
     <div class="offer__wrapper">
       <h2 class="title offer__title">Предложения</h2>
       <ul class="list-reset offer__list">
+
+        {% for offer in offers %}
         <li class="offer__item">
           <div class="offer__item-image">
-            <img src="img/offer-1.png" alt="">
+            <img src="{{ offer.image.url }}" alt="">
           </div>
           <div class="offer__item-content">
-            <div class="offer__item-type">Тип:<span>Роза</span></div>
-            <div class="offer__item-sort">Сорт:<span>Наоми</span></div>
-            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-            <div class="offer__item-color">Цвет:<span>Красный</span></div>
-            <div class="offer__item-price">45, 00 Р</div>
-            <button class="btn btn-reset offer__item-btn"></button>
+            <div class="offer__item-type">Тип:<span>{{offer.title}}</span></div>
+            <div class="offer__item-sort">Сорт:<span>{{offer.sort}}</span></div>
+            <div class="offer__item-length">Длина стебля:<span>{{offer.length}} см</span></div>
+            <div class="offer__item-place">Плантация:<span>{{offer.plantation}}</span></div>
+            <div class="offer__item-color">Цвет:<span>{{offer.color}}</span></div>
+            <div class="offer__item-price">{{offer.price}} Р</div>
+            <a href="{% url 'single_product' offer.id %}" ><button class="btn btn-reset offer__item-btn"></button></a> 
           </div>
         </li>
-        <li class="offer__item">
+        {% endfor %}
+        
+
+
+
+
+
+
+
+        {% comment %} <li class="offer__item offer__item--empty">
           <div class="offer__item-image">
-            <img src="img/offer-2.png" alt="">
+            <!-- <img src="img/offer-3.png" alt=""> -->
           </div>
           <div class="offer__item-content">
-            <div class="offer__item-type">Тип:<span>Роза</span></div>
-            <div class="offer__item-sort">Сорт:<span>Аваланж</span></div>
-            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-            <div class="offer__item-color">Цвет:<span>Красный</span></div>
-            <div class="offer__item-price">45, 00 Р</div>
-            <button class="btn btn-reset offer__item-btn"></button>
+            <div class="offer__item-type">Тип:<span></span></div>
+            <div class="offer__item-sort">Сорт:<span> </span></div>
+            <div class="offer__item-length">Длина стебля:<span> </span></div>
+            <div class="offer__item-place">Плантация:<span></span></div>
+            <div class="offer__item-color">Цвет:<span></span></div>
+            <div class="offer__item-price"> </div>
           </div>
-        </li>
-        <li class="offer__item">
-          <div class="offer__item-image">
-            <img src="img/offer-3.png" alt="">
-          </div>
-          <div class="offer__item-content">
-            <div class="offer__item-type">Тип:<span>Роза</span></div>
-            <div class="offer__item-sort">Сорт:<span>Аваланж Питч</span></div>
-            <div class="offer__item-length">Длина стебля:<span>50 см</span></div>
-            <div class="offer__item-place">Плантация:<span>Макшан</span></div>
-            <div class="offer__item-color">Цвет:<span>Красный</span></div>
-            <div class="offer__item-price">45, 00 Р</div>
-            <button class="btn btn-reset offer__item-btn"></button>
-          </div>
-        </li>
+        </li> {% endcomment %}
       </ul>
-      <a href="" class="btn btn-reset offer__btn">подробнее</a>
+      <a href="{% url 'products' %}" class="btn btn-reset offer__btn">подробнее</a>
     </div>
   </div>
 </div>
@@ -89,7 +60,7 @@
       <ul class="list-reset offer__list">
         <li class="offer__item">
           <div class="offer__item-image">
-            <img src="img/offer-1.png" alt="">
+            <img src="{% static 'img/offer-1.png' %}" alt="">
           </div>
           <div class="offer__item-content">
             <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -102,7 +73,7 @@
         </li>
         <li class="offer__item">
           <div class="offer__item-image">
-            <img src="img/offer-2.png" alt="">
+            <img src="{% static 'img/offer-2.png' %}" alt="">
           </div>
           <div class="offer__item-content">
             <div class="offer__item-type">Тип:<span>Роза</span></div>
@@ -182,30 +153,8 @@
     </div>
   </div>
 </div>
-    <footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <a href="" class="footer__politics">Политика конфиденциальности</a>
-      <ul class="list-reset social__list">
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/insta-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/whatsup-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/twiter-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/tele-icon.png);"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" style="background-image: url(img/vk-icon.png);"></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
+
+{% include 'include/footer.html' %}
 
 <div class="graph-modal lk-modal">
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="message">
@@ -227,7 +176,7 @@
 
   <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="call">
     <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
-      <img src="img/modal-close.svg" alt="">
+      <img src="{% static 'img/modal-close.svg' %}" alt="">
     </button>
     <div class="graph-modal-content">
       <div class="lk-modal__title">Позвонить</div>
@@ -239,10 +188,10 @@
 </div>
     <div class="ancor">
   <button class="btn btn-reset ancor__btn" data-graph-path="call">
-    <img src="img/ancor-phone.png" alt="">
+    <img src="{% static 'img/ancor-phone.png' %}" alt="">
   </button>
   <button class="btn btn-reset ancor__btn" data-graph-path="message">
-    <img src="img/ancor-message.png" alt="">
+    <img src="{% static 'img/ancor-message.png' %}" alt="">
   </button>
 </div>
   </div>

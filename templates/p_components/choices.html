@@ -1,0 +1,33 @@
+{% for k, v in choices.items %}
+<div class="filter__output">
+    <div class="filter__output-name">
+      
+     {% if k == "plantation" %}
+     плантация
+     {% elif k == "type" %}
+      тип
+     {% elif k == "sort" %}
+     сорт
+     {% elif k == "length" %}
+     размер
+     {% elif k == "color" %}
+     цвет
+     {% endif %}
+
+    </div>
+      {% if v != 'all' and k != 'max_price' and k != 'min_price' %}
+      
+      <form >
+        <button class='delete_category_btn' name='delete_category' value="{{v}}" type='submit' style='border-radius:15px;color:#02BC08; background-color:#fff;border: 1px solid green'>
+          {{v}}<span style="color:black">×</span> 
+        </button>
+      </form>
+      
+
+      {% elif v == 'all' %}
+    <button class="btn-reset filter__output-btn">
+      все
+    </button>
+      {% endif %}
+  </div>
+{% endfor %}

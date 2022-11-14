@@ -16792,6 +16792,15 @@ __webpack_require__.r(__webpack_exports__);
 ;
 //# sourceMappingURL=main.js.map
 
+const $btnScrollBottom = document.querySelector(".btn__reg")
+$btnScrollBottom.addEventListener("click", (event)=>{
+  window.scrollTo({
+    top:4050,
+    behavior:"smooth"
+  })
+}) 
 
-let body = document.body;
-body.querySelector(".scrolll").addEventListener("click",()=>setTimeout(()=>body.scrollTop = body.scrollHeight,1000));
+
+
+
+

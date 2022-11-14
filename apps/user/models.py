@@ -11,6 +11,7 @@ class User(AbstractUser):
     address = models.CharField('Адрес',max_length=100, blank=True)
     brief_description = models.CharField('Краткое описание', max_length=100, blank=True)
     last_activity = models.DateTimeField('Был в сети', default=timezone.now)
+    balance = models.PositiveIntegerField('Баланс', default=0)
 
     def __str__(self) -> str:
         return f'{self.username}'
